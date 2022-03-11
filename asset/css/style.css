@@ -1,0 +1,21 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root{
+    --bs-indigo: rgba(8,58,77,255)!important;
+    --bs-teal: rgba(10,214,160,255)!important;
+    --bs-yellow: rgba(255,208,103,255)!important;
+    --bs-info: rgba(18,137,179,255)!important;
+    --bs-primary: rgba(240,71,110,255)!important;
+}
+
+body{
+    background-color: var(--bs-indigo);
+}
+
+.width_calc{
+    width: calc((100% / 7) - 5px);
+}
