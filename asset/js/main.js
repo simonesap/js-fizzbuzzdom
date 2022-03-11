@@ -14,6 +14,17 @@
     2. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 */
 
+let numContainer = document.getElementById('numberContainer');
+
 for (let i = 1; i <= 100; i++) {
-    document.getElementById('numberContainer').innerHTML += `<div class="width_calc fs-3 text-white p-3 border border-white">${i}</div>`
+    console.log(i)
+    if ( i % 3 == 0){
+        numContainer.innerHTML += `<div class="width_calc fs-3 text-white p-3 border border-white">${i = ('Fizz')}</div>`;
+    } else if ( i % 5 == 0 ) {
+        numContainer.innerHTML += `<div class="width_calc fs-3 text-white p-3 border border-white">${i = ('Buzz')}</div>`;
+    } else if ( i % 3 == 0 && i % 5 == 0 ) {
+        numContainer.innerHTML += `<div class="width_calc fs-3 text-white p-3 border border-white">${i = ('FizzBuzz')}</div>`;
+    } else {
+        numContainer.innerHTML += `<div class="width_calc fs-3 text-white p-3 border border-white">${i}</div>`;
+    }
 }
