@@ -17,14 +17,66 @@
 let numContainer = document.getElementById('numberContainer');
 
 for (let i = 1; i <= 100; i++) {
-    console.log(i)
-    if ( i % 3 == 0){
-        numContainer.innerHTML += `<div class="width_calc fs-3 text-white p-3 border border-white">${i = ('Fizz')}</div>`;
-    } else if ( i % 5 == 0 ) {
-        numContainer.innerHTML += `<div class="width_calc fs-3 text-white p-3 border border-white">${i = ('Buzz')}</div>`;
-    } else if ( i % 3 == 0 && i % 5 == 0 ) {
-        numContainer.innerHTML += `<div class="width_calc fs-3 text-white p-3 border border-white">${i = ('FizzBuzz')}</div>`;
-    } else {
-        numContainer.innerHTML += `<div class="width_calc fs-3 text-white p-3 border border-white">${i}</div>`;
+    // console.log(i)
+    if ( i % 5 == 0 && i % 3 == 0) { 
+        numContainer.innerHTML += `<div class="width_calc d-flex align-items-center justify-content-center fs-3 text-white p-3 border border-white" style="background-color: var(--bs-primary)">FizzBuzz</div>`;
+        console.log('FizzBuzz')
     }
-}
+    else if ( i % 5 === 0 ) {
+        numContainer.innerHTML += `<div class="width_calc d-flex align-items-center justify-content-center fs-3 text-white p-3 border border-white" style="background-color: var(--bs-yellow)">Buzz</div>`;
+        console.log('Buzz')
+        }
+    else if ( i % 3 === 0 ) {
+        numContainer.innerHTML += `<div class="width_calc d-flex align-items-center justify-content-center fs-3 text-white p-3 border border-white" style="background-color: var(--bs-teal)">Fizz</div>`;
+        console.log('Fizz')
+    }  else  {
+        numContainer.innerHTML += `<div class="width_calc d-flex align-items-center justify-content-center fs-3 text-white p-3 border border-white" style="background-color: var(--bs-info)">${i}</div>`;
+        console.log(i)
+    } 
+} 
+
+
+// APPEND
+// let div = document.createElement("div")
+// let p = document.createElement("p")
+// div.append(p)
+
+// console.log(div.childNodes) // NodeList [ <p> ]
+
+
+
+// ALTRO METODO
+// let row = document.querySelector('.row');
+// console.log(row);
+
+// for(let i = 1; i <= 100; i++) {
+//     const box = document.createElement('div');
+//     //Creo il risultato di default
+//     let result = i;
+//     let classBox = ''; //La classe specifica per Fizz, Buzz, FIzzBuzz
+
+//     //Se è divisibile per 15 (3 e 5) (il modulo non da resto)
+//     if (i % 15 == 0) { // if(!(i % 15))
+//         result = 'FizzBuzz';
+//         classBox = result;
+//     } else if (i% 3 === 0) { // se invece è divisibile solo per 3
+//         result = 'Fizz';
+//         classBox = result;
+//     } else if (i % 5 === 0) { // se invece è divisibile solo per 5
+//         result = 'Buzz';
+//         classBox = result;
+//     } else {
+//         result = i   
+//     classBox = result 
+//     }
+// }
+
+//VERSIONE COMPATTA
+/*  if(!(i & 3)) result = 'Fizz';
+    if(!(i % 5)) result = 'Buzz';
+    if(!(i % 15)) result = 'FizzBuzz'; */
+
+//Stampo in pagina i box
+// box.innerHTML = result;
+// box.className = 'box' + classBox;
+// row.append(box);    
