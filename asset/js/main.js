@@ -79,4 +79,6 @@ for (let i = 1; i <= 100; i++) {
 //Stampo in pagina i box
 // box.innerHTML = result;
 // box.className = 'box' + classBox;
-// row.append(box);    
+// row.append(box); 
+
+// console.log(result);

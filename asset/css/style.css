@@ -17,7 +17,7 @@ body{
 }
 
 .width_calc{
-    width: calc((80% / 7) - 20px);
-    height: 120px;
+    width: 140px;
+    height: 140px;
     margin: 20px;
 }
